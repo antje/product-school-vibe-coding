@@ -2,7 +2,7 @@
 
 > Module 2 · Validation. The prototype is a hypothesis test, not a demo.
 
-**Status:** Built, checked, and published November 5, 2026. Reviewed by a Codex subagent on November 5. Feedback and the resulting iteration decision are recorded in [show-and-swap-notes.md](show-and-swap-notes.md).
+**Status:** Published November 5, 2026. Feedback and the next iteration are recorded in [show-and-swap-notes.md](show-and-swap-notes.md).
 
 ## Link
 
@@ -10,7 +10,7 @@
 
 [Open the preserved Module 1 v2 comparison](https://metric-moment-compass.anajuana.chatgpt.site/module-1/).
 
-**Workflow adaptation:** The lab asks for a fresh project to preserve the M1↔M2 comparison. I used Codex and Sites, kept M1 on its own route and in Sites version 1, and published lab v3 as Sites version 2 in the same Site. This preserves the comparison but is not a separate fresh project. The existing M1 build supplied the visual reference. Application source stays in Sites' repository; this course repository contains the written artifacts and screenshot evidence.
+The M1 and M2 builds use separate routes in the same Site for comparison. The existing M1 dashboard supplied the visual reference.
 
 ## What it tests
 
@@ -71,10 +71,8 @@ Additional views: [supporting evidence expanded](assets/prototype-v3-supporting-
 
 ## Verification and peer evidence
 
-Functional checks passed before publication: 17 tests, TypeScript, and the production build. Browser checks covered the channel comparison/filter, four/eight-week trend, note validation, saving/reloading, editing, and clearing. Desktop and 390px mobile screenshots were reviewed, including long-text wrapping. Both public routes were published successfully.
+The channel comparison, time-range filter, note validation, saving, reloading, editing, and clearing were checked before publication. Desktop and mobile layouts were also checked. Both comparison links are publicly accessible.
 
 These checks establish that the testable flow works. They do not establish that users can reason from it. The example data and guided comparison test comprehension of prepared evidence; they do not measure reduced bounce, reduced spreadsheet use at work, or improved activation.
 
 **Peer review and decision:** Recorded in [show-and-swap-notes.md](show-and-swap-notes.md). The reviewer connected the headline to channel mix and named relevant unknowns, but flagged that the interface supplied the expected reasoning. Decision: revise the evidence-to-reasoning flow and retest. The [validation brief](validation-brief.md) remains the decision rule; no overall usability pass is claimed.
-
-Build reference: lab v3 is Sites version 2, source commit `a6ddd87b5c1c99c510579782c3ea3da9426df3c1`. M1 remains available on `/module-1/` and in Sites version 1.

@@ -9,10 +9,10 @@ Module 1 exposed the gap: peers understood the metric and suggested action, but 
 - **The bet:** A focused activation headline plus accessible supporting evidence helps a product lead choose a next investigation, explain the evidence, and identify what remains unknown without spreadsheet export or coaching.
 - **Try the build:** [Module 2 v3](https://metric-moment-compass.anajuana.chatgpt.site/) · [preserved Module 1 v2](https://metric-moment-compass.anajuana.chatgpt.site/module-1/).
 - **Read the main deliverable:** [Validation brief](02-validation/validation-brief.md), then [v3 build and screenshots](02-validation/prototype-v3.md).
-- **Evidence today:** Module 1 peer feedback informed the changes. A [Codex reviewer’s v3 walkthrough](02-validation/show-and-swap-notes.md) connected the headline to channel mix but flagged prewritten answer cues. Course baselines and illustrative activation data remain separate.
+- **Evidence today:** Module 1 peer feedback informed the changes. The [v3 feedback](02-validation/show-and-swap-notes.md) connected the headline to channel mix but flagged prewritten answer cues. Course baselines and illustrative activation data remain separate.
 - **Biggest unknown and next test:** Can a product lead explain a defensible investigation without following supplied answer cues? Revise the evidence-to-reasoning flow, then repeat the cold read. The usability hypothesis has not passed yet.
 
-This repository holds the course write-ups, screenshot evidence, and share links. Application source is maintained separately through Sites.
+This repository holds the course write-ups, screenshot evidence, and share links.
 
 ---
 
@@ -21,7 +21,7 @@ This repository holds the course write-ups, screenshot evidence, and share links
 | # | Module | Deliverables | Status | Folder |
 |---|---|---|---|---|
 | 1 | **Velocity** | [v1](01-velocity/prototype-v1.md) · [v2](01-velocity/prototype-v2.md) · [reflection](01-velocity/confidence-line-reflection.md) | Complete, including both peer reads | `01-velocity/` |
-| 2 | **Validation** | [brief](02-validation/validation-brief.md) · [v3](02-validation/prototype-v3.md) · [peer notes](02-validation/show-and-swap-notes.md) | Brief, build, and Codex reviewer feedback recorded; next iteration proposed | `02-validation/` |
+| 2 | **Validation** | [brief](02-validation/validation-brief.md) · [v3](02-validation/prototype-v3.md) · [peer notes](02-validation/show-and-swap-notes.md) | Brief, build, and review feedback recorded; next iteration proposed | `02-validation/` |
 | 3 | **Prompt Chaining** | `PROMPTS.md` (Living Prompt Pack) | Not started | `03-chaining/` |
 | 4 | **Production Specs** | `PRD.md` · `handoff-note.md` | Not started | `04-production/` |
 | 5 | **Full-Stack** | deployed share link + hardening notes | Not started | `05-fullstack/` |

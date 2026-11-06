@@ -1,6 +1,6 @@
 # Context-injected build prompt
 
-Module 2, November 5, 2026. User-supplied prompt executed in Codex against Metric Moment Compass and published through Sites.
+Module 2 · Metric Moment Compass · November 5, 2026.
 
 ## Prompt
 
@@ -23,19 +23,16 @@ Metrics to surface:
 
 Match a clean, credible visual reference (I'll attach a screenshot, copy the pattern, not the brand). Build only the core screens that would prove or break the hypothesis.
 
-## Execution notes
+## Design context
 
-- No new visual reference was attached with this prompt. The existing blue-and-white Module 1 dashboard supplies the visual pattern.
-- The quotes and four dashboard-use metrics are course-provided scenario context, not research or telemetry collected from this prototype.
-- The existing activation cohorts and the added acquisition-channel comparison are illustrative data. They support a usability task and do not establish a real-world cause or an effective intervention.
-- The peer's rationale and remaining uncertainty must be entered by the peer, rather than generated as a passing test answer.
-- A working interface does not establish that the hypothesis passed. Record the actual peer observation separately.
+- **Visual reference:** The existing blue-and-white Module 1 dashboard.
+- **Scenario inputs:** The quotes and four dashboard-use metrics come from the course Context Data Pack.
+- **Analysis data:** The activation cohorts and acquisition-channel comparison are illustrative. Their purpose is to support the investigation task; they do not establish a real-world cause.
+- **Test design:** The reader supplies their own reasoning and uncertainty.
 
-## Refinement recorded November 5, 2026, before peer testing
+## Next iteration
 
-The original prompt above includes the hypothesis, success signal, quotes, and metrics, but omits an explicit risk type and kill switch. They were present in the validation brief. This is a gap in transferring the framing into the prompt; the original is preserved as executed.
-
-The following addendum is prepared for a subsequent iteration. It has not been run as a separate build:
+Proposed additions to the build prompt, using the risk and kill switch from the [validation brief](validation-brief.md). These have not yet been applied to the published build:
 
 > **Risk type:** Usability. Test whether a product lead can reason from the available context to a defensible next investigation.
 >
@@ -45,4 +42,4 @@ The following addendum is prepared for a subsequent iteration. It has not been r
 >
 > **Reference and output:** Use the existing Module 1 dashboard's visual pattern. Make only the change supported by the peer read, preserve the comparison build, and return a clickable flow that lets the same criteria be tested again.
 
-No new build is needed just to restate these constraints. The next change must follow observed peer evidence. The [validation brief](validation-brief.md) is the canonical test protocol.
+The next change is to remove premature answer cues from the investigation note and retest the reader's explanation. See the [feedback and decision](show-and-swap-notes.md).

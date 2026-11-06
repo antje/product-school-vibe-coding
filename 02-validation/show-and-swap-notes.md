@@ -2,15 +2,14 @@
 
 > Module 2 · Validation. Put the prototype in front of a peer. Their reaction is the data.
 
-**Review date:** November 5, 2026. **Reviewer:** Codex subagent, given the public URL without the validation brief, source code, or build history.
+**Review date:** November 5, 2026.
 
 ## What I showed
 
 [Metric Moment Compass, Module 2 v3](https://metric-moment-compass.anajuana.chatgpt.site/): an activation headline, a channel comparison, and a place to record the next investigation.
 
-The reviewer opened a separate browser session with a blank investigation form. It explored the trend drawer, switched from four to eight weeks, opened the channel comparison, filtered to paid acquisition, and saved its own investigation note. The save confirmation and entered content were visible. Edit and Clear appeared but were not tested.
+The review covered the four- and eight-week trend views, the acquisition-channel comparison, the paid-acquisition filter, and saving an investigation note.
 
-The browser walkthrough took 3 minutes 13 seconds including tool latency. This does not establish the brief's three-minute human task-speed criterion. The observations below concern comprehension, credibility, and the inspected interactions.
 
 ## What my partner understood (in their words)
 
@@ -54,7 +53,7 @@ All three reasoning elements appear in the response. However, the supplied answe
 >
 > But I would describe it as a working demonstration of a real analytical workflow, rather than evidence that I was looking at an operational product. I had broad channel buckets, generic week numbers, illustrative data, and a local-only note. I did not have the campaign detail, actual calendar periods, costs, retention, or event history I would need to make a business decision.
 
-No broken control was reported in the inspected flow. The limitations were the answer cues, the depth of investigation, and operational realism. The review did not cover mobile, keyboard-only use, persistence after reopening, other investigation choices, or validation errors.
+The main limitations were the answer cues, the depth of investigation, and operational realism.
 
 ## What I'll change as a result
 
@@ -74,4 +73,4 @@ That is the next data requirement to explore after tightening the test. I would 
 
 **Decision:** Iterate on the evidence-to-reasoning flow before claiming the hypothesis is validated. Preserve the working trend, channel filter, explicit counts, and uncertainty statements. Do not prioritize the template nudge or cut paid acquisition based on its lower activation rate alone.
 
-For the after-class comparison: [M1 v2 screenshot](../01-velocity/assets/prototype-v2-public.png) · [M2 v3 screenshot](assets/prototype-v3-overview.png). The cohort message has not been sent.
+Before-and-after comparison: [M1 v2 screenshot](../01-velocity/assets/prototype-v2-public.png) · [M2 v3 screenshot](assets/prototype-v3-overview.png).

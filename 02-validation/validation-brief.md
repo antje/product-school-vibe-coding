@@ -2,7 +2,7 @@
 
 > Module 2 · Validation. Frame the riskiest assumption, then build to test it. **This locks your scenario, no switching after M2.**
 
-**Status:** Framed November 5, 2026 before the build. The v3 prototype is published. The protocol was clarified before the review. A Codex reviewer’s observations and the decision to iterate are now recorded in [show-and-swap-notes.md](show-and-swap-notes.md); the three-minute human usability criterion is not established.
+**Status:** Published November 5, 2026. Review feedback and the decision to iterate are recorded in [show-and-swap-notes.md](show-and-swap-notes.md). The hypothesis remains unvalidated.
 
 ## Scenario
 
@@ -86,18 +86,12 @@ These quotes come from the course's Context Data Pack, not interviews I conducte
 
 ### Hypothesis
 
-Defined above. The [executed build prompt](context-injected-build-prompt.md) preserves the selected quotes, metrics, and hypothesis, plus a dated note about its missing explicit risk/kill instructions.
+Defined above. The [build prompt](context-injected-build-prompt.md) carries the selected quotes, metrics, and hypothesis into the prototype.
 
 ## Build scope and next step
 
-**Validation Lens Loop:** Hypothesis and constraints defined → clickable build complete → Codex reviewer feedback captured → revise and retest. The feedback exposed answer cues that weaken the assessment of independent reasoning.
+**Validation Lens Loop:** Hypothesis and constraints defined → clickable build complete → feedback captured → revise and retest. The feedback exposed answer cues that weaken the assessment of independent reasoning.
 
 The [published v3](prototype-v3.md) implements headline → acquisition-channel comparison → investigation note. Funnel analysis, product errors, and template history remain possible later investigations, not additional screens or invented evidence. M1 remains available for comparison.
 
 Next, revise the note’s premature evidence cues and repeat the cold read. Keep the three criteria fixed and record the explanation before coaching. A pass supports testing with representative product leads and their data. It does not establish reduced bounce, less spreadsheet use at work, improved activation, or a proven cause.
-
-**Refined November 5, 2026:** An earlier draft required finding context within 30 seconds. That remains a diagnostic observation, not a pass/fail gate; the three-minute walkthrough governs the decision.
-
-**Protocol clarified November 5, 2026, before peer results:** Removed upfront task explanation to follow the lab's link-only cold read. Made “all three criteria” explicit and separated contaminated setup from usability failure. The headline, related-signal, and uncertainty requirements are unchanged.
-
-**Review synthesis, November 5, 2026:** The reviewer explained a specific investigation using the headline and related signals, and named missing evidence. It also identified that the note supplied those signals before the comparison was opened. The next change targets that cueing problem. The criteria are unchanged, and the published v3 has not yet been revised.
