@@ -1,39 +1,43 @@
 # Vibe Coding Project: Living Repo
 
-> My final project for Product School's **AI Vibe Coding** certification. One product problem, carried from Module 2 to Module 6: each build advances the same idea along the **Confidence Line**, from a validated hypothesis to a live, measured product.
+> **Metric Moment Compass:** help a product lead investigate an activation decline with enough context to explain the next step.
 
-This is a **template repo**. Click **Use this template → Create a new repository**, name it `my-vibe-coding-project`, and commit one module's artifact per session. **The repo is your portfolio, it shows the journey, not just the endpoint.**
+My final project for Product School's **AI Vibe Coding** certification follows **Scenario 04: The Dashboard Nobody Reads**, locked for Modules 2–6.
+
+Module 1 exposed the gap: peers understood the metric and suggested action, but could not judge why a starter-template nudge would address the decline. Module 2 adds supporting context so the user can choose and justify an investigation.
+
+- **The bet:** A focused activation headline plus accessible supporting evidence helps a product lead choose a next investigation, explain the evidence, and identify what remains unknown without spreadsheet export or coaching.
+- **Try the build:** [Module 2 v3](https://metric-moment-compass.anajuana.chatgpt.site/) · [preserved Module 1 v2](https://metric-moment-compass.anajuana.chatgpt.site/module-1/).
+- **Read the main deliverable:** [Validation brief](02-validation/validation-brief.md), then [v3 build and screenshots](02-validation/prototype-v3.md).
+- **Evidence today:** Module 1 peer feedback informed the changes. The v3 interactions have been checked. Course baselines and illustrative activation data are labeled separately.
+- **Biggest unknown and next test:** Can a new peer explain a defensible investigation after three minutes without help? [Module 2 peer observations](02-validation/show-and-swap-notes.md) are pending. The usability hypothesis has not passed yet.
+
+This repository holds the course write-ups, screenshot evidence, and share links. Application source is maintained separately through Sites.
 
 ---
 
 ## Deliverables at a glance
 
-| # | Module | Commits | Status | Folder |
+| # | Module | Deliverables | Status | Folder |
 |---|---|---|---|---|
-| 1 | **Velocity** | `prototype-v1.md` · `prototype-v2.md` · `confidence-line-reflection.md` | ☐ | `01-velocity/` |
-| 2 | **Validation** | `validation-brief.md` · `prototype-v3.md` · `show-and-swap-notes.md` | ☐ | `02-validation/` |
-| 3 | **Prompt Chaining** | `PROMPTS.md` (Living Prompt Pack) | ☐ | `03-chaining/` |
-| 4 | **Production Specs** | `PRD.md` · `handoff-note.md` | ☐ | `04-production/` |
-| 5 | **Full-Stack** | deployed share link + hardening notes | ☐ | `05-fullstack/` |
-| 6 | **Evals & Iteration** | final showcase + go/iterate/kill recommendation | ☐ | `06-iteration/` |
+| 1 | **Velocity** | [v1](01-velocity/prototype-v1.md) · [v2](01-velocity/prototype-v2.md) · [reflection](01-velocity/confidence-line-reflection.md) | Complete, including both peer reads | `01-velocity/` |
+| 2 | **Validation** | [brief](02-validation/validation-brief.md) · [v3](02-validation/prototype-v3.md) · [peer notes](02-validation/show-and-swap-notes.md) | Brief and build ready; peer observation and synthesis pending | `02-validation/` |
+| 3 | **Prompt Chaining** | `PROMPTS.md` (Living Prompt Pack) | Not started | `03-chaining/` |
+| 4 | **Production Specs** | `PRD.md` · `handoff-note.md` | Not started | `04-production/` |
+| 5 | **Full-Stack** | deployed share link + hardening notes | Not started | `05-fullstack/` |
+| 6 | **Evals & Iteration** | final showcase + go/iterate/kill recommendation | Not started | `06-iteration/` |
 
 ## My scenario
 
-_Pick one in Module 2: no switching after M2._
+**Chosen scenario:** Scenario 04, The Dashboard Nobody Reads. Locked November 5, 2026.
 
-- [ ] The Retention Engine (B2B SaaS, value risk)
-- [ ] The Internal Tool Nobody Uses (CRM, usability)
-- [ ] The Marketplace Trust Problem (value / feasibility)
-- [ ] The Dashboard Nobody Reads (usability)
-- [ ] Bring your own (instructor-approved)
-
-**Chosen scenario:** _____
+**Primary risk:** Usability. A product lead sees a fall in first-project activation but needs related signals to decide what to investigate. The prototype tests that decision-making task. It does not test whether a template nudge improves activation.
 
 ## The three ingredients (visible in every build)
 
-1. **Hypothesis**: what you believe and why
-2. **Real data**: domain metrics on screen, no placeholders
-3. **User voice**: real verbatim quotes
+1. **Hypothesis:** The specific usability bet and observable pass/fail rule in the [validation brief](02-validation/validation-brief.md).
+2. **Domain data:** Four course-provided dashboard baselines on screen, separate from the illustrative activation and channel comparison.
+3. **User voice:** Three verbatim course-provided quotes, connected to the choices in the [v3 build](02-validation/prototype-v3.md).
 
 ___
 
@@ -45,7 +49,7 @@ ___
 ## Repo structure
 
 ```
-my-vibe-coding-project/
+product-school-vibe-coding/
 ├── README.md                       ← this dashboard
 ├── 01-velocity/
 │   ├── prototype-v1.md             ← M1 Lab 1: first build + Show & Swap read
