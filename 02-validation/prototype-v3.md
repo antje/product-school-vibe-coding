@@ -2,7 +2,7 @@
 
 > Module 2 · Validation. The prototype is a hypothesis test, not a demo.
 
-**Status:** Built, checked, and published November 5, 2026. Ready for the new-peer cold read; no Module 2 peer results have been collected.
+**Status:** Built, checked, and published November 5, 2026. Reviewed by a Codex subagent on November 5. Feedback and the resulting iteration decision are recorded in [show-and-swap-notes.md](show-and-swap-notes.md).
 
 ## Link
 
@@ -16,7 +16,7 @@
 
 Whether a first screen with one headline metric, a plain-language takeaway, and a clear path to supporting context helps product leads investigating a drop in first-project activation choose and explain a sensible next investigation without exporting to a spreadsheet or needing help.
 
-The success criterion from the [validation brief](validation-brief.md) is that, after a three-minute unaided walkthrough, a new peer can name a next investigation, support it with the headline and at least one related signal, and identify what remains unknown. Peer testing is pending; the build alone does not establish that the hypothesis passed.
+The success criterion from the [validation brief](validation-brief.md) is that, after a three-minute unaided walkthrough, a new peer can name a next investigation, support it with the headline and at least one related signal, and identify what remains unknown. The recorded review surfaced all three reasoning elements and a concern about prewritten answer cues. It does not establish an overall hypothesis pass.
 
 ## Context injected (no placeholders)
 
@@ -57,7 +57,7 @@ The implemented interaction includes a channel filter, the retained four/eight-w
 | v2 | Added a clickable activation trend with four/eight-week filters, an expandable proposed test, and separate Observed, Unknown, and Hypothesis statements. | Let users inspect the metric and understand the proposed experiment. Peers still questioned why a template nudge was the right response and wanted related metrics and audience context. |
 | v3 | Added a filterable acquisition-channel comparison and a locally saved investigation note for the user's chosen investigation, evidence, reasoning, and remaining uncertainty. Put all three selected quotes and four course metrics on screen. | Test whether supporting context helps users choose and justify their own next investigation. This addresses the peer's audience-mix question while keeping the cause and appropriate intervention open to investigation. |
 
-The next iteration is not chosen yet. It will follow the actual Module 2 peer observation and the decision rule in the brief.
+**Review-driven next iteration, proposed:** Remove the investigation note’s prewritten evidence answers from the initial view, so they do not reveal the comparison before the reader explores it. Retest whether the reader can explain the evidence in their own words. The reviewer also requested campaign-level drill-down; that requires additional data. These changes are not implemented in the published v3. See the [feedback and decision](show-and-swap-notes.md).
 
 ## Screenshots
 
@@ -75,6 +75,6 @@ Functional checks passed before publication: 17 tests, TypeScript, and the produ
 
 These checks establish that the testable flow works. They do not establish that users can reason from it. The example data and guided comparison test comprehension of prepared evidence; they do not measure reduced bounce, reduced spreadsheet use at work, or improved activation.
 
-**Peer observation and decision:** Pending in [show-and-swap-notes.md](show-and-swap-notes.md). The [validation brief](validation-brief.md) contains the three criteria and kill switch. No pass or pivot decision has been made yet.
+**Peer review and decision:** Recorded in [show-and-swap-notes.md](show-and-swap-notes.md). The reviewer connected the headline to channel mix and named relevant unknowns, but flagged that the interface supplied the expected reasoning. Decision: revise the evidence-to-reasoning flow and retest. The [validation brief](validation-brief.md) remains the decision rule; no overall usability pass is claimed.
 
 Build reference: lab v3 is Sites version 2, source commit `a6ddd87b5c1c99c510579782c3ea3da9426df3c1`. M1 remains available on `/module-1/` and in Sites version 1.
