@@ -65,3 +65,31 @@ Check whether the reader can see the important change first, compare activation 
 
 Name only material problems, with the specific screen and element, the effect on the user's task, and a focused correction. Do not request decorative novelty or unrelated features. A visual review is not evidence that the usability hypothesis passed.
 ```
+
+## Selected visual reference and follow-up prompt
+
+[Profound analytics screen on Mobbin](https://mobbin.com/screens/8dfd92df-f43e-4951-8c89-d1f23e3cddbf), selected as the primary reference after reviewing Amplitude, Mixpanel, and Profound examples. [Saved reference screenshot](reference/profound.png).
+
+```text
+Use the selected Profound screen as the primary visual direction. Adapt its quiet left navigation, compact breadcrumb and period bar, white panels, thin borders, restrained corner radius, and aligned data columns to Metric Moment Compass. Preserve our content and investigation flow.
+
+Use neutral ink and gray for previous/current comparisons and reserve blue for actions and focus. Keep only navigation and controls that work: Overview, Campaigns, Investigation note, and Research context. Show the two actual comparison periods without adding filters unsupported by our fixture. On small screens, keep both period values together and make all navigation available.
+
+Apply the same shell and comparison component to the overview, campaign list, and campaign detail. Retain explicit illustrative-data labeling. Copy the structural pattern, not the brand, unrelated demographics, or decorative controls.
+```
+
+## Focused correction after review
+
+```text
+Save a snapshot of collected observations with each investigation note. Editing the working collection must not alter the evidence already included in a saved note. Cancel edits must restore the saved reasoning and display that saved evidence snapshot.
+
+If the working collection differs from the saved snapshot, say so and provide an Edit note action. Include the current collection when saving again. Keep older notes readable, validate restored observation objects, and retain honest storage-failure handling. Verify save → edit → remove observation → cancel → refresh without losing the saved evidence.
+```
+
+## Focused placement update
+
+```text
+Move the course research section out of the activation overview into a separate Research context page. Keep all three scenario quotes and all four dashboard-use metrics visible there, with their provenance and distinction from the activation sample. Link it from the shared sidebar and provide a clear route back to Overview.
+
+Keep the main dashboard focused on activation, supporting evidence, and the investigation note. Preserve the saved notes and draft workflow. Direct navigation and refresh must work on the new page. The research page should not inherit the activation comparison-period bar because these figures describe the course scenario, not that period.
+```
