@@ -23,7 +23,7 @@ This repository holds the course write-ups, screenshot evidence, and share links
 | 1 | **Velocity** | [v1](01-velocity/prototype-v1.md) · [v2](01-velocity/prototype-v2.md) · [reflection](01-velocity/confidence-line-reflection.md) | Complete, including both peer reads | `01-velocity/` |
 | 2 | **Validation** | [brief](02-validation/validation-brief.md) · [v3](02-validation/prototype-v3.md) · [peer notes](02-validation/show-and-swap-notes.md) | Brief, build, and review feedback recorded; next iteration proposed | `02-validation/` |
 | 3 | **Prompt Chaining** | [Living Prompt Pack](03-chaining/PROMPTS.md) · [design prompts](03-chaining/design-v4/DESIGN-PROMPTS.md) · [results and screenshots](03-chaining/design-v4/RESULT.md) | Chain executed; results and reflection recorded; prompt peer read pending | `03-chaining/` |
-| 4 | **Production Specs** | [Living PRD](04-production/PRD.md) · [engineering handoff](04-production/handoff-note.md) | PRD and handoff complete; refactor and Supabase verified | `04-production/` |
+| 4 | **Production Specs** | [Living PRD](04-production/PRD.md) · [engineering handoff](04-production/handoff-note.md) | PRD and handoff complete. Refactor and Supabase verified. | `04-production/` |
 | 5 | **Full-Stack** | deployed share link + hardening notes | Not started | `05-fullstack/` |
 | 6 | **Evals & Iteration** | final showcase + go/iterate/kill recommendation | Not started | `06-iteration/` |
 
