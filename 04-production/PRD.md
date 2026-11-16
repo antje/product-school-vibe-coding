@@ -8,7 +8,7 @@ _What user problem does this solve? Tie to the validated hypothesis._
 
 Product leads investigating a fall in first-project activation need enough related context to choose a sensible next investigation. A headline alone does not establish why activation changed or justify an intervention. Earlier feedback challenged the proposed starter-template nudge and asked for audience and campaign context.
 
-[Metric Moment Compass](https://metric-moment-compass.anajuana.chatgpt.site/) supports headline → supporting evidence → campaign drill-down → investigation note. This is a record of the current prototype as of November 15, 2026, before the Lab 2 refactor or backend work.
+[Metric Moment Compass](https://metric-moment-compass.anajuana.chatgpt.site/) supports headline → supporting evidence → campaign drill-down → investigation note. Updated November 15, 2026, after the Lab 2 refactor and Supabase connection. The original Lab 1 findings are retained below as historical context.
 
 **Hypothesis:** One headline metric, a plain-language takeaway, and accessible supporting context will help a product lead choose and explain a next investigation without spreadsheet export or coaching. Following the [validation brief](../02-validation/validation-brief.md), success means that after a three-minute unaided walkthrough, a new reviewer can name an investigation, connect the headline and at least one related signal to it, and identify a relevant unknown. The three-minute window comes from the course's silent walkthrough.
 
@@ -21,8 +21,8 @@ Product leads investigating a fall in first-project activation need enough relat
 
 ## Scope
 
-- **In:** A responsive, publicly accessible prototype with an activation overview, four/eight-week trend drawer, channel comparison and filter, campaign comparison/detail, observation collection, one browser-local investigation note and draft, research context, and the preserved Module 1 experience.
-- **Out (explicitly):** Live analytics ingestion, arbitrary date ranges, user accounts, authentication, Supabase or another product database, shared/cross-device notes, note history, exports, campaign management, automated diagnosis, AI inference, notifications, and experiment execution. Cost, retention, release/error history, and template-use data are absent. Choosing those investigation topics does not open corresponding analysis screens.
+- **In:** A responsive, publicly accessible prototype with an activation overview, four/eight-week trend drawer, channel comparison and filter, campaign comparison/detail, observation collection, one browser-local investigation note and draft, research context, and the preserved Module 1 experience. Supabase persists the illustrative metrics and provides an enabled Auth service and an owner-protected note schema for future integration.
+- **Out (explicitly):** Live analytics ingestion, arbitrary date ranges, application sign-in, account-backed/shared/cross-device notes, note history, exports, campaign management, automated diagnosis, AI inference, notifications, file uploads, and experiment execution. Cost, retention, release/error history, and template-use data are absent. Choosing those investigation topics does not open corresponding analysis screens.
 
 **Screen map and flow**
 
@@ -44,8 +44,8 @@ Shared navigation links to Overview, Campaigns, the investigation note, Research
 | 1 | Explain the activation change | Must | Overview shows 38% (304/800) versus 42% (336/800), down 4 percentage points. It defines activation as completing a first project within seven days and labels the data illustrative. |
 | 2 | Explore the activation trend | Must | Selecting Last 4 weeks shows 304/800 = 38%; Last 8 weeks shows 640/1,600 = 40%. Weekly points and tooltip counts update. Closing the drawer returns to the underlying screen. |
 | 3 | Compare channel performance and mix | Must | Opening the comparison reveals activation rates, signup shares, exact counts, and supporting-signal checkboxes. All channels, Direct & organic, and Paid acquisition filters change the displayed rows; share denominators remain all 800 signups in each period. The text distinguishes arithmetic from an unknown cause. |
-| 4 | Follow campaign evidence | Must | Paid acquisition opens Campaign comparison. Search and Social open matching detail records, including on direct entry. Both screens use the same fixture. The comparison total pools campaign counts, and detail signup shares use the summed paid-signup denominators. No weekly campaign trend is invented. |
-| 5 | Handle loading, empty, and error states | Must | Loading replaces rows with a skeleton. A valid empty response shows “No campaigns are available for this period.” Request/JSON/schema failure shows “We couldn't load campaign data. Try again.” with Retry and no stale rows. Retry starts a new request on the same route. |
+| 4 | Follow campaign evidence | Must | Paid acquisition opens Campaign comparison. Search and Social open matching detail records, including on direct entry. Both screens use the same active dataset. The comparison total pools campaign counts, and detail signup shares use the summed paid-signup denominators. No weekly campaign trend is invented. |
+| 5 | Handle loading, empty, and error states | Must | Loading replaces rows with a skeleton. A valid empty campaign collection shows “No campaigns are available for this period.” In hosted mode, empty campaigns are valid only when they reconcile with paid-channel totals. Request/JSON/schema/reconciliation failure shows “We couldn't load campaign data. Try again.” with Retry and no stale rows. Retry reloads the selected data source on the same route. |
 | 6 | Separate missing records from failures | Must | After a valid response, an unknown campaign displays “Campaign not found.” with Back to campaigns. An unrelated unknown route displays Page not found with Go home. The root error boundary offers Try again and Go home. |
 | 7 | Collect campaign observations | Must | Add observation stores campaign rates, completion/signup counts, signup-share percentages, period labels, and a source link. Adding the same campaign/period twice creates one item. The editor can remove an item; successful writes update the confirmation. |
 | 8 | Record the reader's reasoning | Must | Investigation selection, rationale, and unknown must be nonblank; choosing a custom investigation also requires its title. Invalid save focuses the first invalid field. Evidence selection is optional. Saving does not grade reasoning or verify that it uses the headline and a supporting signal. |
@@ -60,13 +60,15 @@ Priorities identify behavior to preserve in the current prototype: Must supports
 
 _What gets stored, what gets tracked._
 
-**Technical reality:** React and TanStack routing run as a static site hosted through Sites. Navigation, calculations, filters, form validation, and browser storage work. Campaign screens make a real same-origin HTTP request to `/data/campaigns.json`, but the response is a bundled sample file, not a live analytics API. No product backend, database, account, or auth layer is connected. The prompts used to build the app are development artifacts; no model runs inside the dashboard.
+**Technical reality:** React and TanStack routing run as a static site hosted through Sites. With hosted configuration, one shared provider reads dataset metadata, cohorts, channels, and campaigns from Supabase PostgreSQL and validates their counts and reconciliation before rendering. Request or validation failure shows an error and Retry without substituting local data. With both Supabase settings omitted, the app uses bundled fixtures and requests `/data/campaigns.json` for campaigns. These are illustrative metrics in either mode, not live analytics. Email Auth is enabled with confirmation; Storage is provisioned and unused. The app has no sign-in UI or remote note adapter, so notes remain browser-local. The prompts used to build the app are development artifacts; no model runs inside the dashboard.
 
 **Data sources and business rules**
 
-- `src/lib/activation-sample.ts`: eight illustrative weekly cohorts, each with `week`, `eligible`, and `activated`; 200 eligible signups per cohort. Every displayed cohort is described as having completed its seven-day observation window.
-- `src/lib/validation-data.ts`: channel counts, investigation choices, supporting-signal labels, and course quotes/metrics. The research baselines concern dashboard usage, not first-project activation.
-- `public/data/campaigns.json`: campaign `id`, `name`, and previous/current `{eligible, activated}`. The parser rejects invalid/duplicate IDs, blank names, negative or noninteger counts, and completions above eligible signups.
+- `src/features/activation/activation-dataset.ts`: hosted `sample-v1` reads from `dataset_versions`, `activation_cohorts`, `acquisition_channels`, and `campaigns`; validates metadata, counts, duplicate IDs/weeks, and cohort → channel → campaign reconciliation. `ActivationDatasetContext.tsx` shares the loaded dataset and Retry across the active screens. The migration and seed are in `supabase/migrations/202611150001_core.sql`.
+- `src/features/activation/activation-sample.ts` and `channel-data.ts`: bundled fallback cohorts and channels when hosted settings are omitted. The eight sample cohorts each have 200 eligible signups and a completed seven-day observation window. The preserved `/module-1/` screen continues to use this bundled sample.
+- `src/features/activation/supporting-signals.ts`: supporting-signal labels derived from the active cohorts and channels. Investigation choices live in `src/features/investigation/investigation-options.ts`.
+- `src/features/research/research-context-data.ts`: course quotes and dashboard-use baselines, separate from first-project activation data.
+- `public/data/campaigns.json`: fixture-mode campaign `id`, `name`, and previous/current `{eligible, activated}`. `src/features/campaigns/campaign-data.ts` rejects invalid/duplicate IDs, blank names, negative or noninteger counts, and completions above eligible signups.
 
 | Sample segment | Previous 4 weeks: completed / eligible | Last 4 weeks: completed / eligible |
 |---|---|---|
@@ -86,25 +88,29 @@ Rates use completions divided by eligible signups. Paid's share of all signups c
 | `activation-investigation-draft-v1` | The same note shape for unfinished edits. A valid draft takes precedence on restore. Save and Cancel attempt to clear it. |
 | `activation-observations-v1` | A separate working collection. Each observation has `id`, `title`, `summary`, `detail`, `href`, and `periodLabel`. IDs deduplicate a campaign and the fixed comparison periods. |
 
-Snapshots include campaign completion/signup counts and the displayed rate/share percentages, but not the paid-share denominator totals. No record stores a user ID, timestamp, or dataset version. There is no remote sync, multi-note history, or account separation; other users of the same browser profile can access the stored content. Clearing browser storage removes it.
+Snapshots include campaign completion/signup counts and the displayed rate/share percentages, but not the paid-share denominator totals. No browser-local record stores a user ID, timestamp, or dataset version. The unused `investigation_notes` database contract includes those fields and owner-based access rules, but the app does not yet save notes there. There is no remote sync, multi-note history, or account separation for local notes; other users of the same browser profile can access the stored content. Clearing browser storage removes it.
 
 **Events and measurement:** `activation-observations-changed` and the browser's `storage` event refresh the working collection; `hashchange` opens supporting evidence. These are UI events, not product analytics. No workflow events or success metrics are sent to an analytics service. The three-minute test requires manual observation and assessment.
 
-Conditional Lovable error-reporting hooks remain in the source. Both hooks were absent in the inspected public page, so they are not a verified production monitoring service. The opt-in `?demo=loading`, `?demo=empty`, and `?demo=error` URLs force labeled states without fetching; `?demo=success` and normal navigation fetch the fixture. Retry removes the forced mode and attempts the normal request.
+Conditional Lovable error-reporting hooks remain in the source. Both hooks were absent in the Lab 1 public-page inspection, so they are not a verified production monitoring service. The opt-in `?demo=loading`, `?demo=empty`, and `?demo=error` URLs force labeled campaign states. Fixture-mode previews skip the campaign request; in hosted mode the shared provider may still fetch context. `?demo=success` and normal navigation use the selected data source. Retry removes the forced mode and reloads that source.
 
 ## Open questions
 
-**Look under the hood: Lab 1 findings**
+**Look under the hood: historical Lab 1 findings**
+
+These findings describe the pre-refactor build preserved in the [Lab 1 PRD snapshot](https://github.com/antje/product-school-vibe-coding/blob/b02576c470ad7e66395e6e3993c80700dcf66cd2/04-production/PRD.md).
 
 - **Naming:** Mostly understandable: `CampaignComparison`, `CampaignDetail`, `ResearchContext`, and `useCampaignData` describe their roles. `ValidationDashboard` and `validation-data.ts` still reflect earlier course terminology. Routes live in `src/routes`, not `src/pages`.
 - **Separation:** Partial. Campaign fetching, schema validation/calculation, and observation persistence are separated from display. `ValidationDashboard.tsx` still mixes note validation, storage, form behavior, and rendering. Fixtures span three files, so replacing sample data is not a one-file change.
 - **Documentation:** An app README exists with setup, test, build, sample-data, and hosting instructions. It still describes the Module 2 build and only two prerendered routes. It omits the current campaign/research flow, storage contract, and recovery behavior. It helps someone start the app but is incomplete for an engineering handoff.
 
+**Lab 2 resolution:** Screens are now grouped by feature, with note validation, browser persistence, transitions, and rendering separated. The app README covers current routes, setup, and storage behavior. Supabase sample reads and rollback-only database checks passed, including grants, constraints, and two-user row isolation. Application sign-in and remote note saving remain unfinished. See the [engineering handoff](handoff-note.md) for the current source map, verification, and next task.
+
 **Decisions before production**
 
 1. **Product:** Does the revised flow pass all three unaided reasoning criteria with representative product leads? Supporting text still explains the sample's audience-mix arithmetic, so a correct answer alone may reflect answer cues. Repeat the test before declaring the hypothesis validated or approving production hardening.
 2. **Product and data engineering:** What real source, attribution rules, calendar boundaries, timezone, cohort-maturity policy, and refresh cadence replace the fixtures? Who owns reconciliation and a consistent missing/zero-data rule?
-3. **Product and engineering:** Should notes remain personal to one browser, or support accounts, sharing, history, and export? Decide ownership, access controls, retention, and migration of existing local notes before choosing a backend schema. Supabase is not connected yet.
+3. **Product and engineering:** Should notes remain personal to one browser, or use the owner-protected Supabase note table? Before connecting accounts, decide retention and explicit import of existing local notes. Sharing, history, and export remain separate scope decisions; the current app has no sign-in or remote note adapter.
 4. **Product and analytics:** Which events and manual rubric will measure a defensible investigation? A production baseline, target, and measurement period remain undefined; current course metrics are not production targets.
 5. **Engineering:** What error monitoring, data provenance, versioned evidence snapshots, and conflict handling are needed once data or users become real? The current collection sync does not provide collaborative note editing.
-6. **Engineering, next lab:** Begin with the note lifecycle in `ValidationDashboard.tsx`, separate its persistence/validation from display, and update the app README to match all routes and states. Use the existing behavior checks to preserve the flow. Estimate implementation effort after the real-data and persistence scope is agreed. These are recommendations, not completed Lab 1 changes.
+6. **Engineering, next task:** Start with `src/features/investigation/investigation-note-storage.ts`, `useInvestigationNote.ts`, and `supabase/README.md` to add sign-in and an owner-scoped note adapter. Preserve drafts and saved snapshots, make local-note import explicit, and verify two separate authenticated sessions plus Auth redirect/email behavior before claiming cross-device persistence.
