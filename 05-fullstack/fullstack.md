@@ -40,7 +40,7 @@ Guest notes stay in browser storage. Account drafts and observations use per-use
 
 ## Stress test results
 
-Verified on November 22, 2026. Automated checks, live Data API checks, and browser observations are distinguished below.
+Verified on November 22, 2026. Lab 2 uses **Spam Click** as its selected stress test, alongside the offline kill switch. Automated checks, live Data API checks, and browser observations are distinguished below.
 
 | Check | Result |
 |---|---|
@@ -48,14 +48,19 @@ Verified on November 22, 2026. Automated checks, live Data API checks, and brows
 | Authentication recovery | **Passed, automated:** same-user reauthentication restores saving and retains the draft. A late sign-in response cannot undo sign-out. |
 | Pagination and data bounds | **Passed, automated:** totals include off-page rows, smaller server pages do not truncate data, 5,000 campaigns load, and a 5,001st row triggers an error. Live capacity is unmeasured. |
 | First account / empty state | **Passed, live:** a newly created, confirmed account logged in and showed “Get started,” without inheriting the guest note. Application signup and confirmation delivery remain pending. |
-| Slow network | **Partially verified:** reload and navigation succeeded under Slow 4G, with the session intact. The published overview also displayed its loading state before hosted metrics arrived. Loading skeletons have automated coverage. |
+| Slow network | **Partially verified:** reload and navigation preserved the session, and the published overview displayed its loading state before hosted metrics arrived. Slow 4G was enabled in a separate test tab, so these observations do not establish behavior under throttling. Loading skeletons have automated coverage. |
 | Persistent save | **Passed, live Data API:** both accounts logged in. Account A created and updated a note with server-owned timestamps, then retrieved it in a fresh authenticated session. The browser subsequently saved the recovery-test note and retained its contents and server timestamp after refresh. |
 | Two-account isolation | **Passed, live Data API:** account B’s attempts to read, update, or delete A’s note returned no rows. Creating a note with A’s identity and transferring A’s ownership to B were denied. B saved its own independent note. Delayed browser account changes are covered by automated regressions. |
 | Offline kill switch and recovery | **Passed, browser:** with Chrome Network set to Offline, Save showed an unconfirmed-save error, retained the draft and signed-in identity, and disabled another write. After connectivity returned, Check saved note restored saving. The confirmed save survived refresh. Separate per-URL blocking was not run. |
-| Duplicate writes and concurrent saves | **Passed, live Data API:** five duplicate upserts left one note. Two sessions confirmed that the last accepted write wins. UI pending guards have automated coverage. The rapid-write check ran against the live Data API, with browser duplicate-submission behavior tested automatically. |
+| Spam Click: five rapid Save clicks | **Passed, browser:** five rapid clicks on Save changes put the form into its disabled Saving state. After refresh, the account showed one saved investigation with unchanged content and an updated server timestamp. **Passed, live Data API:** five concurrent upserts also left one row. The database primary key enforces one note per account. |
+| Successive saves from two sessions | **Passed, live Data API:** two sessions saved in sequence, and the last accepted write replaced the earlier revision. Simultaneous conflicting edits were not tested. The product does not merge edits. |
 | Database limits and cleanup | **Passed, live Data API:** a 10,001-character field was rejected without replacing the saved revision. The run removed only its test notes and signed out both verification sessions. The report recorded **19 passed, 0 failed**. |
 | Module 5 publication | **Passed:** Sites version 7 published successfully at the existing public URL. The public overview loaded hosted metrics, sign-in succeeded, and the saved recovery note appeared from a separate origin. The direct Social campaign route also loaded correctly. Title, favicon, and share-image metadata are present. |
 
-**Ship decision:** ship the class prototype for public exploration and the confirmed test accounts. Private persistence, ownership checks, and offline recovery passed. Broad self-service signup still needs custom SMTP and verified confirmation delivery. Campaign capacity is covered by automated fixtures, not a production load test. Implementation checks do not validate the Module 2 usability hypothesis.
+**Ship decision: SHIP for the class prototype and confirmed test accounts.** No P0 blocker was observed in the tested save, access-control, offline-recovery, or five-click flows. The public dashboard remains available without login. **NO-SHIP for broad self-service account onboarding** until custom SMTP is configured and signup confirmation succeeds end to end.
 
-Evidence: [public overview](assets/public-overview.jpg), [sign-in screen](assets/sign-in.jpg), [confirmed cloud note](assets/cloud-note.jpg), and [live verification report](live-verification.txt).
+**Known gaps:** throttled-network behavior and a separate blocked-request test remain unverified. The 5,000-row boundary has automated fixture coverage, with live capacity unmeasured. Simultaneous edits use replacement rather than merging. These implementation checks do not validate the Module 2 usability hypothesis.
+
+Evidence: [public overview](assets/public-overview.jpg), [sign-in screen](assets/sign-in.jpg), [confirmed cloud note](assets/cloud-note.jpg), [saved note after five rapid clicks and refresh](assets/spam-click-persisted.jpg), and [live verification report](live-verification.txt).
+
+Presentation copy: [Integrations & Data Model and Edge Cases & Known Gaps](deck-sections.md).

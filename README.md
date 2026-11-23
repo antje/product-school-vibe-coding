@@ -24,7 +24,7 @@ This repository holds the course write-ups, screenshot evidence, and share links
 | 2 | **Validation** | [brief](02-validation/validation-brief.md) · [v3](02-validation/prototype-v3.md) · [peer notes](02-validation/show-and-swap-notes.md) | Brief, build, and review feedback recorded; next iteration proposed | `02-validation/` |
 | 3 | **Prompt Chaining** | [Living Prompt Pack](03-chaining/PROMPTS.md) · [design prompts](03-chaining/design-v4/DESIGN-PROMPTS.md) · [results and screenshots](03-chaining/design-v4/RESULT.md) | Chain executed; results and reflection recorded; prompt peer read pending | `03-chaining/` |
 | 4 | **Production Specs** | [Living PRD](04-production/PRD.md) · [engineering handoff](04-production/handoff-note.md) | PRD and handoff complete. Refactor and Supabase verified. | `04-production/` |
-| 5 | **Full-Stack** | [Data, access rules, edge cases, and deploy](05-fullstack/fullstack.md) | Published. Private persistence, access rules, and offline recovery verified. Signup email delivery remains a known gap. | `05-fullstack/` |
+| 5 | **Full-Stack** | [Data, access rules, edge cases, and deploy](05-fullstack/fullstack.md) · [deck sections](05-fullstack/deck-sections.md) | Labs 1–2 recorded and published. Offline recovery and five-click saving passed. Signup email delivery remains a known gap. | `05-fullstack/` |
 | 6 | **Evals & Iteration** | final showcase + go/iterate/kill recommendation | Not started | `06-iteration/` |
 
 ## My scenario
