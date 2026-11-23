@@ -4,8 +4,6 @@
 
 ## What the evidence says
 
-_What real usage showed: numbers if your tool has analytics, counted behaviour if it does not. Put the signal that matters on screen._
-
 - **Primary signal:** The review produced a specific audience-mix investigation, connected the activation headline to channel and campaign evidence, and identified missing causal information. These are the three reasoning elements in the [Module 2 validation brief](../02-validation/validation-brief.md).
 - **What moved:** The reviewed flow supports a complete investigation: headline → channel comparison → campaign detail → collected observation → saved rationale and unknowns. Published version 8 adds **Copy summary** so the saved investigation can travel with its evidence and sample-data caveat. Browser checks confirmed copying for a public guest note and a local private note. A cancelled draft was excluded.
 - **What didn't:** User drop-off, demand for copying, and any improvement in investigation quality remain unmeasured. The usability hypothesis still needs a user study.
@@ -28,7 +26,7 @@ The displayed activation figures are illustrative. The course's 60% bounce and 7
 
 | Change | Hypothesis | Result |
 |---|---|---|
-| Add **Copy summary** to saved guest and private investigation notes. **Branching:** extend the saved note into a portable summary. | Carrying the saved question, rationale, unknowns, and evidence together may help a product lead bring the investigation into a discussion without reconstructing it. | Published as version 8. Public guest and local private-note clipboard checks passed. The summary preserved saved content, observations, source URLs, and the illustrative-data caveat. A cancelled draft was excluded. Usefulness in a discussion remains to be tested. |
+| Add **Copy summary** to saved guest and private investigation notes. **Guardrail:** copy only saved content, and report success only after a confirmed clipboard write. | Carrying the saved question, rationale, unknowns, and evidence together may help a product lead bring the investigation into a discussion without reconstructing it. | Published as version 8. Public guest and local private-note clipboard checks passed. The summary preserved saved content, observations, source URLs, and the illustrative-data caveat. A cancelled draft was excluded. Usefulness in a discussion remains to be tested. |
 
 **Why this change:** The baseline review identified one concrete extension: the saved-note screen had no copy/export/share action. The ranked backlog places copying first, fresh unaided user evidence second, and workflow measurement third. The latter two remain follow-up work. The [sprint brief](iteration-sprint-brief.md) preserves the evidence, ranking, exact prompts, and results.
 
@@ -65,11 +63,11 @@ Historical [Module 1 peer feedback](../01-velocity/prototype-v2.md#show--swap-re
 
 **Decision:** ☐ Go  ☑ Iterate  ☐ Kill.
 
-_The evidence that justifies the call:_
-
 The baseline guest workflow completed without an observed navigation or save failure and supported a coherent investigation. Lab 2 addressed the handoff candidate with one reversible change, **Copy summary**, verified its saved-content behaviour, and published it. This supports continued iteration. A broader launch needs evidence from intended users.
 
-Next, repeat the three-minute unaided reasoning test with fresh representative product leads. Keep the original three criteria: name an investigation, connect the headline and a related signal to it, and identify an unknown. If any criterion fails, revise that step before expanding scope. Assess the copied summary's usefulness for a discussion separately, after the reasoning explanation, so the new control does not become a cue in that test.
+**Next decision gate, owned by Antje:** before prioritizing another feature, repeat the three-minute unaided reasoning test with a fresh representative product lead. Keep the original three criteria: name an investigation, connect the headline and a related signal to it, and identify an unknown. If any criterion fails, revise that step and repeat the test. If all three pass, continue validation with additional leads and their data before making an adoption claim. An unrun or coached test does not clear the gate. Assess the copied summary's usefulness separately, after the reasoning explanation, so the new control does not become a cue.
+
+Modules 3–6 advanced the engineering work without establishing the original usability assumption. That is a limitation of the course build. The next investment is evidence about independent reasoning, rather than more capability.
 
 Confidence has increased in implementation. Adoption, the quality of independent reasoning, and the value of the copied summary remain open questions.
 
@@ -79,4 +77,4 @@ Confidence has increased in implementation. Adoption, the quality of independent
 - **Publication evidence:** Version 8 deployed successfully on November 22, 2026. The public guest-note copy check passed. Source commit: `a9d03cf3cc907e90ce559a0a89a4f1bd2b4dd6a3`.
 - **The one-sentence story:** Metric Moment Compass turns an activation decline into a reasoned next investigation that carries its evidence and uncertainty into a discussion.
 - **Where it landed on the Confidence Line (M2 → now):** The build has progressed from a clickable hypothesis test to a deployed investigation workflow with hosted sample data, private cloud notes, and a copyable summary. Engineering confidence has increased. The M2 usability hypothesis and real-world usefulness still need validation.
-- **Showcase status:** Pending the separate final presentation. The evidence and Iterate recommendation are recorded here.
+- **Showcase:** [Final presentation](../final-presentation.html), a self-contained HTML file. It carries the product, hypothesis, PRD, prompt chain, handoff, evidence, and Iterate decision into one story. The same file is staged at [docs/index.html](../docs/index.html) for optional Pages hosting.

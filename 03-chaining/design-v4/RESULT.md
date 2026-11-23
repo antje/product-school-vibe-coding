@@ -1,5 +1,7 @@
 # Dashboard v4: Design revision
 
+**Historical design record:** These screenshots and checks describe the M3 revision. [M5](../../05-fullstack/fullstack.md) later added private account notes, and [M6](../../06-iteration/iteration.md) added Copy summary. The live URL serves the current build.
+
 [Open the dashboard](https://metric-moment-compass.anajuana.chatgpt.site/) · [Research context](https://metric-moment-compass.anajuana.chatgpt.site/research/) · [Design prompts](DESIGN-PROMPTS.md)
 
 ## What changed and why

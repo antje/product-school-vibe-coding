@@ -4,6 +4,8 @@
 
 **Review date:** November 5, 2026.
 
+This feedback describes M2 v3. M3 subsequently removed the premature evidence cues and added the [campaign drill-down](../03-chaining/PROMPTS.md). The live URL now serves the [later build](../06-iteration/iteration.md). The original feedback below is preserved.
+
 ## What I showed
 
 [Metric Moment Compass, Module 2 v3](https://metric-moment-compass.anajuana.chatgpt.site/): an activation headline, a channel comparison, and a place to record the next investigation.

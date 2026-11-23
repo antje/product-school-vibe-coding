@@ -40,6 +40,8 @@ Guest notes stay in browser storage. Account drafts and observations use per-use
 
 ## Stress test results
 
+The engineering limits above are provisional prototype safeguards. The 15-second deadline bounds an otherwise indefinite wait, 10 rows keep the comparison page scannable, and the 5,000-row cap bounds client-side processing while rejecting truncated totals. Text and observation limits bound note payloads. These choices have functional coverage, but have not been tuned from user behavior or measured production capacity.
+
 Verified on November 22, 2026. Lab 2 uses **Spam Click** as its selected stress test, alongside the offline kill switch. Automated checks, live Data API checks, and browser observations are distinguished below.
 
 | Check | Result |

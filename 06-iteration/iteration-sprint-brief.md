@@ -12,7 +12,7 @@
 
 **M2 hypothesis:** A first screen with one headline metric, a plain-language takeaway, and accessible supporting context will help a product lead choose and explain a sensible next investigation without spreadsheet export or help. The [validation brief](../02-validation/validation-brief.md#hypothesis) requires a new peer, after a three-minute unaided walkthrough, to name an investigation, support it with the headline and at least one related signal, and identify a relevant unknown.
 
-**Current confidence:** The current-build review produced those three reasoning elements. It is qualitative review evidence, not a representative user study or a validation of the hypothesis. The PRD's problem and hypothesis remain the anchor. Its older implementation inventory predates the current private-note flow.
+**Current confidence:** The current-build review produced those three reasoning elements. It is qualitative review evidence, not a representative user study or a validation of the hypothesis. The PRD's problem and hypothesis remain the anchor; its dated M5/M6 update describes the current private-note and copied-summary flow.
 
 ## 2 · The Metrics
 
@@ -85,7 +85,7 @@ No product-usage analytics report is available. Visitors, sessions, bounce, rete
 
 - **Chosen finding:** A saved investigation preserves the reasoning and evidence inside the product, but the reviewed screen has no direct way to copy that complete context into a discussion.
 - **Why this one:** It is the only concrete workflow extension suggested by the current review. The summary can preserve the question, evidence, and uncertainty together without requiring the reader to reconstruct them elsewhere. Its usefulness remains a hypothesis to test.
-- **Move type: Branching.** Extend the saved note into a portable summary. Saved-state and privacy rules constrain that extension, but the primary move is adding a handoff to the investigation flow.
+- **Move type: Guardrail.** If a saved note exists, copy only that saved content. If the clipboard write succeeds, show Copied. If it fails, offer selectable text without claiming success. The initial analysis called this Branching. The final classification was refined on November 22 to match the implemented conditional behavior, rather than imply a visual mental-model change.
 - **Expected behaviour:** After saving, a reader can copy the saved investigation as plain text with its supporting observations and sample-data caveat intact. Unsaved edits do not enter that summary.
 - **Completion rule:** One saved-summary action works for guest and private notes. It reports clipboard success truthfully and offers selectable text when copying fails. Existing note editing, saving, clearing, account separation, and evidence snapshots continue to work.
 
@@ -116,7 +116,7 @@ Keep all existing functionality working. Add focused checks for the saved snapsh
 - **Evidence:** [Before](assets/before-copy-summary.jpg) · [Published after](assets/after-copy-summary.jpg) · [Actual copied summary](assets/copied-investigation-summary.txt) · [Local private-note check](assets/local-private-copy-summary.jpg).
 - **Redeployed live URL:** https://metric-moment-compass.anajuana.chatgpt.site/
 - **Deployment verification:** Version 8 deployed successfully on November 22, 2026. Source commit: `a9d03cf3cc907e90ce559a0a89a4f1bd2b4dd6a3`. The public guest-note check verified rationale, 16/120 and 48/240 counts, the comparison period, the Social source URL, and the caveat in the actual clipboard output.
-- **Folded into:** [iteration.md](iteration.md) records the sprint result and recommendation. The [README](../README.md) records completed Labs 1–2 and the outstanding final showcase.
+- **Folded into:** [iteration.md](iteration.md) records the sprint result and recommendation. The [final presentation](../final-presentation.html) carries this evidence into the showcase, and the [README](../README.md) links the submission artifacts.
 - **Recommendation:** **Iterate.** The reviewed guest workflow supports a coherent investigation, and the copy-summary implementation passed verification and is live. Independent user understanding, actual usage, and the usefulness of the handoff remain unmeasured. Test those assumptions before expanding scope.
 
 The next validation uses a fresh representative product lead and the existing unaided reasoning criteria. Assess whether the saved summary can support a discussion separately, after the reasoning explanation is recorded, so the new control does not become a cue in the M2 test.

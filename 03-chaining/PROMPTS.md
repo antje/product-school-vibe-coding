@@ -6,7 +6,7 @@
 
 ## How to use this pack
 
-Run Expand → Behavior → Refine, one prompt at a time. Review each plan and verify its output before running the next prompt. Record actual outcomes after execution.
+Run Expand → Behavior → Refine, one prompt at a time. Review each plan and verify its output before running the next prompt. Expand applies **Sequential Logic**, Behavior uses **Constraint Grounding**, and Refine uses a **Reflection Prompt** to decide whether a change is justified.
 
 Use the existing Metric Moment Compass M2 build. Attach the [M2 supporting-evidence screenshot](../02-validation/assets/prototype-v3-supporting-evidence.png) for Steps 1 and 3. Keep the [M2 overview](../02-validation/assets/prototype-v3-overview.png) available as a second reference. These are the visual references named in the prompts.
 
@@ -132,8 +132,6 @@ Return before/after screenshots of that block and name the exact styling change.
 - **Use reflection to decide whether a change is needed.** The heading already matched the visual reference. Keeping it avoided unrelated edits to a stable flow.
 
 ## What broke (and the fix)
-
-_Where a single mega-prompt failed and chaining fixed it._
 
 A separate mega-prompt comparison was not run. The concrete issue found during this chain was direct routing: an unknown campaign URL could reach a blank hosting 404 instead of the app's “Campaign not found.” screen, even though the local router handled it.
 

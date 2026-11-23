@@ -4,9 +4,11 @@
 
 **Status:** Published November 5, 2026. Feedback and the next iteration are recorded in [show-and-swap-notes.md](show-and-swap-notes.md).
 
+**Historical build record:** This document and its screenshots preserve M2 v3. The live URL now serves the later build described in the [current PRD](../04-production/PRD.md) and [M6 iteration](../06-iteration/iteration.md).
+
 ## Link
 
-[Open the Module 2 prototype](https://metric-moment-compass.anajuana.chatgpt.site/)
+[Open the current product](https://metric-moment-compass.anajuana.chatgpt.site/)
 
 [Open the preserved Module 1 v2 comparison](https://metric-moment-compass.anajuana.chatgpt.site/module-1/).
 
