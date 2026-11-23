@@ -1,3 +1,5 @@
+[![Metric Moment Compass — investigate an activation decline before choosing an intervention](assets/metric-moment-compass-banner.png)](https://antje.github.io/product-school-vibe-coding/)
+
 # Metric Moment Compass
 
 > **Metric Moment Compass:** help a product lead investigate an activation decline with enough context to explain the next step.
@@ -8,7 +10,7 @@ The first prototype proposed a starter-template nudge before explaining the acti
 
 - **The bet:** A focused activation headline plus accessible supporting evidence helps a product lead choose a next investigation, explain the evidence, and identify what remains unknown without spreadsheet export or coaching.
 - **Try the product:** [Live version 8](https://metric-moment-compass.anajuana.chatgpt.site/) · [preserved Module 1 prototype](https://metric-moment-compass.anajuana.chatgpt.site/module-1/).
-- **See the story:** [Final presentation](final-presentation.html), a self-contained HTML file with the complete product and evidence story.
+- **See the story:** [Final presentation](https://antje.github.io/product-school-vibe-coding/), published on GitHub Pages. A [self-contained HTML copy](final-presentation.html) is also included.
 - **Evidence today:** [158 automated tests and successful summary-copy checks](06-iteration/iteration.md) support the implementation. [19 live database checks](05-fullstack/fullstack.md) support persistence and account isolation. Course baselines, illustrative analytics, and qualitative review are kept separate from product-usage evidence.
 - **Decision: Iterate.** The guest demo and confirmed-account flows work. Broad signup remains a no-ship until confirmation-email delivery is verified. The usability hypothesis has not passed a human study.
 - **Biggest unknown and next test:** Can a product lead explain a defensible investigation without coaching? M3 removed premature answer cues. Before prioritizing another feature, Antje will run the [three-minute test and its three fixed criteria](02-validation/validation-brief.md#kill-switch) with a fresh representative product lead. Any failed criterion sends that step back for revision.
@@ -26,7 +28,7 @@ This repository holds the course write-ups, screenshot evidence, and share links
 | 3 | **Prompt Chaining** | [Living Prompt Pack](03-chaining/PROMPTS.md) · [design prompts](03-chaining/design-v4/DESIGN-PROMPTS.md) · [results and screenshots](03-chaining/design-v4/RESULT.md) | Chain executed, verified, and reflected on. A class-peer prompt read is not recorded. | `03-chaining/` |
 | 4 | **Production Specs** | [Living PRD](04-production/PRD.md) · [engineering handoff](04-production/handoff-note.md) | PRD and handoff complete. Refactor and Supabase verified. | `04-production/` |
 | 5 | **Full-Stack** | [Data, access rules, edge cases, and deploy](05-fullstack/fullstack.md) · [deck sections](05-fullstack/deck-sections.md) | Labs 1–2 recorded and published. Offline recovery and five-click saving passed. Signup email delivery remains a known gap. | `05-fullstack/` |
-| 6 | **Evals & Iteration** | [Evidence and recommendation](06-iteration/iteration.md) · [sprint brief](06-iteration/iteration-sprint-brief.md) · [final presentation](final-presentation.html) | Copy summary verified and published. Showcase assembled. Decision: Iterate. User validation remains open. | `06-iteration/` |
+| 6 | **Evals & Iteration** | [Evidence and recommendation](06-iteration/iteration.md) · [sprint brief](06-iteration/iteration-sprint-brief.md) · [final presentation](https://antje.github.io/product-school-vibe-coding/) | Copy summary verified and published. Showcase published on GitHub Pages. Decision: Iterate. User validation remains open. | `06-iteration/` |
 
 ## My scenario
 
@@ -47,9 +49,9 @@ ___
 Submit both items in the Learning Platform's **Upload Your Vibe Coding Final Project** section:
 
 1. **Repository:** https://github.com/antje/product-school-vibe-coding. The live product link and six modules of evidence are included here.
-2. **Presentation:** Download and upload [final-presentation.html](final-presentation.html). The HTML contains its images and works without an internet connection. Product and evidence links require internet access. An identical copy at [docs/index.html](docs/index.html) is ready for optional GitHub Pages hosting.
+2. **Presentation:** https://antje.github.io/product-school-vibe-coding/. You can also download and upload [final-presentation.html](final-presentation.html). The HTML contains its images and works without an internet connection. Product and evidence links require internet access. GitHub Pages serves the identical copy at [docs/index.html](docs/index.html).
 
-The presentation supports previous/next controls, arrow keys, a reading view, and printing. The repository is private, so the reviewer must have repository access. Submit within **7 days of the cohort ending** to receive written instructor feedback. This repository does not establish the cohort's end date or confirm Learning Platform submission.
+The presentation supports previous/next controls, arrow keys, a reading view, and printing. The repository and presentation are public, so reviewers can open both without signing in. Submit within **7 days of the cohort ending** to receive written instructor feedback. This repository does not establish the cohort's end date or confirm Learning Platform submission.
 
 ## Repo structure
 
