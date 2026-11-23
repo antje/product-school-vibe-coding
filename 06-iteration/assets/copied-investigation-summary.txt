@@ -1,0 +1,21 @@
+Metric Moment Compass — Investigation summary
+Illustrative sample data. These observations do not establish a cause or measure product impact.
+
+Investigation
+Audience and channel quality
+
+Why investigate this
+Investigate the changed audience mix. Overall activation fell from 42% to 38% while channel activation remained 50% direct/organic and 30% paid. Social's activation improved from 13.3% to 20%, but its share of paid signups grew from 37.5% to 50%.
+
+Supporting signals (current dataset labels)
+No supporting signals selected.
+
+Still unknown
+Why paid acquisition became a larger share, which audiences changed within Social, and whether spend, targeting or onboarding experiences changed are unknown.
+
+Saved campaign observations
+1. Social · Paid acquisition
+Activation 13.3% → 20% (+6.7 pp). Share of paid signups 37.5% → 50%.
+Previous: 16/120 completed. Last: 48/240 completed.
+Period: Previous 4 weeks → Last 4 weeks · completed 7-day cohorts
+Source: https://metric-moment-compass.anajuana.chatgpt.site/campaigns/social/
