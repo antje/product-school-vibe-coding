@@ -1,0 +1,20 @@
+PASS sanitized verification report opened
+PASS input validation
+PASS account A password sign-in
+PASS account B password sign-in
+PASS both accounts have no existing investigation note
+PASS account A creates its own note without replacing existing data
+PASS account A upsert and server-owned timestamps
+PASS saved note survives a fresh authenticated session
+PASS account B cannot read account A note
+PASS account B cannot update account A note
+PASS account B cannot delete account A note
+PASS account B cannot insert a note with account A ownership
+PASS account A cannot transfer note ownership to account B
+PASS account B creates an independent private note
+PASS five duplicate upserts leave one account A note
+PASS the last accepted write wins across two sessions
+PASS database rejects an oversized note without replacing the saved revision
+PASS cleanup removes only notes created by this verification run
+PASS verification sessions signed out without deleting accounts
+PASS verification summary: 19 passed, 0 failed
