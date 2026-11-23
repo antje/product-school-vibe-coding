@@ -20,7 +20,7 @@ The displayed activation figures are illustrative. The course's 60% bounce and 7
 | Friction candidate | No visible copy/export/share action on the saved-note screen. | An expectation gap and candidate improvement, not an observed abandonment point or established demand. |
 | Failures | No broken navigation or failed save was established in the reviewed flow. | No claim about all users, devices, or failure conditions. |
 
-**Audit against the lab questions:** No ghost feature or repeated stall point can be identified without usage counts or repeated observations. The review is consistent with the intended evidence-to-investigation flow, but it does not establish that the M2 hypothesis has passed. Cohort reach, unaided completion rates, and repeated requests for explanation remain unmeasured.
+**Evidence limits:** No ghost feature or repeated stall point can be identified without usage counts or repeated observations. The review is consistent with the intended evidence-to-investigation flow, but it does not establish that the M2 hypothesis has passed. Cohort reach, unaided completion rates, and repeated requests for explanation remain unmeasured.
 
 ## Iteration sprint
 

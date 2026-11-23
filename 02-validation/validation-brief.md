@@ -1,6 +1,6 @@
 # Validation Brief
 
-> Module 2 · Validation. Frame the riskiest assumption, then build to test it. **This locks your scenario, no switching after M2.**
+> Module 2 · Validation. Frame the riskiest assumption, then build to test it.
 
 **Status:** Published November 5, 2026. Review feedback and the decision to iterate are recorded in [show-and-swap-notes.md](show-and-swap-notes.md). The hypothesis remains unvalidated.
 

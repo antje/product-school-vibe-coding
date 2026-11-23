@@ -2,7 +2,7 @@
 
 > Module 1 · Velocity. Same prototype, two surgical upgrade passes, closing the gap from toy to tool.
 
-**Status:** Lab 2 write-up completed with the published build, interaction checks, screenshots, and Round 2 feedback. The product remains an early prototype using illustrative data.
+**Status:** Published early prototype using illustrative data.
 
 **Scenario:** Scenario 04: The Dashboard Nobody Reads.
 
@@ -14,7 +14,7 @@ The recommended-action section. My first peer understood that the dashboard conn
 
 The sample activation rate shows a decline, but it does not explain the cause or establish that a starter-template nudge will help. The next version should let someone inspect the metric and understand the reasoning behind the proposed experiment.
 
-## Upgrade paths run (pick two)
+## Upgrade paths run
 
 - [ ] Design Match
 - [x] Add Interactivity

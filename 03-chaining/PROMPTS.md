@@ -138,7 +138,3 @@ A separate mega-prompt comparison was not run. The concrete issue found during t
 The targeted fix was to retain prerendered pages for the known routes and add a static fallback that starts the app for unmatched URLs. The unknown-ID screen then loads the shared data, reports that the campaign is missing, and provides a Back path. This required no analytics backend. Retesting covered direct entry and the normal comparison → detail → back flow.
 
 The return link also needed to reopen the overview's collapsed evidence section. Handling that arrival explicitly preserves the investigation path. Separating expansion, behavior, and refinement made these navigation issues visible before considering visual changes.
-
-## Prompt cold-read feedback
-
-Peer prompt cold-read feedback has not been recorded. The build checks above document execution, not a peer usability result.
