@@ -116,7 +116,6 @@ Keep all existing functionality working. Add focused checks for the saved snapsh
 - **Evidence:** [Before](assets/before-copy-summary.jpg) · [Published after](assets/after-copy-summary.jpg) · [Actual copied summary](assets/copied-investigation-summary.txt) · [Local private-note check](assets/local-private-copy-summary.jpg).
 - **Redeployed live URL:** https://metric-moment-compass.anajuana.chatgpt.site/
 - **Deployment verification:** Version 8 deployed successfully on November 22, 2026. Source commit: `a9d03cf3cc907e90ce559a0a89a4f1bd2b4dd6a3`. The public guest-note check verified rationale, 16/120 and 48/240 counts, the comparison period, the Social source URL, and the caveat in the actual clipboard output.
-- **Folded into:** [iteration.md](iteration.md) records the sprint result and recommendation. The [final presentation](../final-presentation.html) carries this evidence into the showcase, and the [README](../README.md) links the submission artifacts.
 - **Recommendation:** **Iterate.** The reviewed guest workflow supports a coherent investigation, and the copy-summary implementation passed verification and is live. Independent user understanding, actual usage, and the usefulness of the handoff remain unmeasured. Test those assumptions before expanding scope.
 
 The next validation uses a fresh representative product lead and the existing unaided reasoning criteria. Assess whether the saved summary can support a discussion separately, after the reasoning explanation is recorded, so the new control does not become a cue in the M2 test.

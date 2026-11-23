@@ -28,4 +28,4 @@
 
 **Live product:** [Metric Moment Compass](https://metric-moment-compass.anajuana.chatgpt.site/)
 
-**Submission evidence:** [Full-stack record](fullstack.md) · [five-click result](assets/spam-click-persisted.jpg)
+**Verification evidence:** [Full-stack record](fullstack.md) · [five-click result](assets/spam-click-persisted.jpg)

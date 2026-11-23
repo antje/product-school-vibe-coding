@@ -25,7 +25,7 @@ This repository holds the course write-ups, screenshot evidence, and share links
 |---|---|---|---|---|
 | 1 | **Velocity** | [v1](01-velocity/prototype-v1.md) · [v2](01-velocity/prototype-v2.md) · [reflection](01-velocity/confidence-line-reflection.md) | Complete, including both peer reads | `01-velocity/` |
 | 2 | **Validation** | [brief](02-validation/validation-brief.md) · [v3](02-validation/prototype-v3.md) · [peer notes](02-validation/show-and-swap-notes.md) | Brief, build, and review feedback recorded; next iteration proposed | `02-validation/` |
-| 3 | **Prompt Chaining** | [Living Prompt Pack](03-chaining/PROMPTS.md) · [design prompts](03-chaining/design-v4/DESIGN-PROMPTS.md) · [results and screenshots](03-chaining/design-v4/RESULT.md) | Chain executed, verified, and reflected on. A class-peer prompt read is not recorded. | `03-chaining/` |
+| 3 | **Prompt Chaining** | [Living Prompt Pack](03-chaining/PROMPTS.md) · [design prompts](03-chaining/design-v4/DESIGN-PROMPTS.md) · [results and screenshots](03-chaining/design-v4/RESULT.md) | Chain executed, verified, and reflected on. | `03-chaining/` |
 | 4 | **Production Specs** | [Living PRD](04-production/PRD.md) · [engineering handoff](04-production/handoff-note.md) | PRD and handoff complete. Refactor and Supabase verified. | `04-production/` |
 | 5 | **Full-Stack** | [Data, access rules, edge cases, and deploy](05-fullstack/fullstack.md) · [deck sections](05-fullstack/deck-sections.md) | Labs 1–2 recorded and published. Offline recovery and five-click saving passed. Signup email delivery remains a known gap. | `05-fullstack/` |
 | 6 | **Evals & Iteration** | [Evidence and recommendation](06-iteration/iteration.md) · [sprint brief](06-iteration/iteration-sprint-brief.md) · [final presentation](https://antje.github.io/product-school-vibe-coding/) | Copy summary verified and published. Showcase published on GitHub Pages. Decision: Iterate. User validation remains open. | `06-iteration/` |
@@ -42,23 +42,12 @@ This repository holds the course write-ups, screenshot evidence, and share links
 2. **Domain data:** Four course-provided dashboard baselines in [Research context](https://metric-moment-compass.anajuana.chatgpt.site/research/), separate from illustrative activation and channel data.
 3. **User voice:** Three verbatim course-provided quotes in Research context. Their design implications remain in the [validation brief](02-validation/validation-brief.md#the-three-ingredients).
 
-___
-
-## How to submit
-
-Submit both items in the Learning Platform's **Upload Your Vibe Coding Final Project** section:
-
-1. **Repository:** https://github.com/antje/product-school-vibe-coding. The live product link and six modules of evidence are included here.
-2. **Presentation:** https://antje.github.io/product-school-vibe-coding/. You can also download and upload [final-presentation.html](final-presentation.html). The HTML contains its images and works without an internet connection. Product and evidence links require internet access. GitHub Pages serves the identical copy at [docs/index.html](docs/index.html).
-
-The presentation supports previous/next controls, arrow keys, a reading view, and printing. The repository and presentation are public, so reviewers can open both without signing in. Submit within **7 days of the cohort ending** to receive written instructor feedback. This repository does not establish the cohort's end date or confirm Learning Platform submission.
-
 ## Repo structure
 
 ```
 product-school-vibe-coding/
 ├── README.md                       ← this dashboard
-├── final-presentation.html         ← self-contained presentation for submission
+├── final-presentation.html         ← self-contained presentation
 ├── docs/index.html                 ← identical GitHub Pages presentation
 ├── 01-velocity/
 │   ├── prototype-v1.md             ← M1 Lab 1: first build + Show & Swap read
